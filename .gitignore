@@ -3,4 +3,4 @@ node_modules/
 
 # Ignore log files and build artifacts
 *.log
-/build/
+*.history
