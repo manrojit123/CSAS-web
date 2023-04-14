@@ -326,10 +326,10 @@ const Works = () => {
                     
                   </div>
                   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                   <img src={Prev} alt="Previous Button"/>
+                   <img src={Prev} alt="/>
                   </button>
                   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <img src={Next} alt="Next Button"/>
+                    <img src={Next}/>
                   </button>
                 </div></div>
                 

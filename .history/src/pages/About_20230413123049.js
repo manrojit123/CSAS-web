@@ -132,7 +132,7 @@ const About = () => {
         <div className="col-12 col-xl-10 mx-auto  text-center">
           <h2 className="title mb-3">Board of Trustees</h2>
         </div>
-        <div className="col-3 col-sm-3 mx-sm-auto col-md-3">
+        <div className="col-4 col-sm-5 mx-sm-auto col-md-3">
           <img
             src={Iman}
             className="img-fluid"
@@ -140,7 +140,7 @@ const About = () => {
           />
           <h5>Dr. Iman Gurung</h5>
         </div>
-        <div className="col-3 col-sm-3 mx-sm-auto col-md-3">
+        <div className="col-4 col-sm-5 mx-sm-auto col-md-3">
           <img
             src={Pranab}
             className="img-fluid"
@@ -148,7 +148,7 @@ const About = () => {
           />
           <h5>Dr. Pranab Das</h5>
         </div>
-        <div className="col-3 col-sm-3 mx-sm-auto col-md-3">
+        <div className="col-4 col-sm-5 mx-sm-auto col-md-3">
           <img
             src={Thomas}
             className="img-fluid"

@@ -329,7 +329,7 @@ const Works = () => {
                    <img src={Prev} alt="Previous Button"/>
                   </button>
                   <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <img src={Next} alt="Next Button"/>
+                    <img src={Next}/>
                   </button>
                 </div></div>
                 

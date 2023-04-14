@@ -13,22 +13,10 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 export default function App() {
   return (
-    <div>
-      {/* <h1>{process.env.NODE_ENV}</h1> */}
-       <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<Home />} />
-          <Route path="about-us" element={<About />} />
-          <Route path="blogs" element={<Blogs />} />
-          <Route path="contact" element={<Contact />} />
-          <Route path="research-team" element={<Research />} />
-          <Route path="our-works" element={<Works />} />
-          <Route path="*" element={<NoPage />} />
-        </Route>
-      </Routes>
-    </BrowserRouter>
-    </div>
+    <>
+    <h1>Hello</h1>
+    </>
+    
    
   );
 }

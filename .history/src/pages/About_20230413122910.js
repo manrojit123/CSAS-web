@@ -62,7 +62,7 @@ const About = () => {
         <div className="col-12 col-xl-10 mx-auto  text-center">
           <h2 className="title mb-3">Research Team</h2>
         </div>
-        <div className="col-6 col-sm-5 mx-sm-auto col-md-3">
+        <div className="col-6 col-sm-4 col-md-3">
           <img
             src={BillDune}
             className="img-fluid"
@@ -70,7 +70,7 @@ const About = () => {
           />
           <h5>Bill Duane</h5>
         </div>
-        <div className="col-6 col-sm-5 mx-sm-auto col-md-3">
+        <div className="col-6 col-sm-4 col-md-3">
           <img
             src={Elizabeth}
             className="img-fluid"
@@ -78,7 +78,7 @@ const About = () => {
           />
           <h5>Dr. Elizaveta Solomonova</h5>
         </div>
-        <div className="col-6 col-sm-5 mx-sm-auto col-md-3">
+        <div className="col-6 col-sm-4 col-md-3">
           <img
             src={Iman}
             className="img-fluid"
@@ -86,7 +86,7 @@ const About = () => {
           />
           <h5>Dr. Iman Gurung</h5>
         </div>
-        <div className="col-6 col-sm-5 mx-sm-auto col-md-3">
+        <div className="col-6 col-sm-4 col-md-3">
           <img
             src={Michael}
             className="img-fluid"
@@ -94,7 +94,7 @@ const About = () => {
           />
           <h5>Dr. Michael Levin</h5>
         </div>
-        <div className="col-6 col-sm-5 mx-sm-auto col-md-3">
+        <div className="col-6 col-sm-4 col-md-3">
           <img
             src={Olaf}
             className="img-fluid"
@@ -102,7 +102,7 @@ const About = () => {
           />
           <h5>Dr. Olaf Witkowski</h5>
         </div>
-        <div className="col-6 col-sm-5 mx-sm-auto col-md-3">
+        <div className="col-6 col-sm-4 col-md-3">
           <img
             src={Pranab}
             className="img-fluid"
@@ -110,7 +110,7 @@ const About = () => {
           />
           <h5>Dr. Pranab Das</h5>
         </div>
-        <div className="col-6 col-sm-5 mx-sm-auto col-md-3">
+        <div className="col-6 col-sm-4 col-md-3">
           <img
             src={Richard}
             className="img-fluid"
@@ -118,7 +118,7 @@ const About = () => {
           />
           <h5>Dr. Richard Watson</h5>
         </div>
-        <div className="col-6 col-sm-5 mx-sm-auto col-md-3">
+        <div className="col-6 col-sm-4 col-md-3">
           <img
             src={Thomas}
             className="img-fluid"
@@ -132,7 +132,7 @@ const About = () => {
         <div className="col-12 col-xl-10 mx-auto  text-center">
           <h2 className="title mb-3">Board of Trustees</h2>
         </div>
-        <div className="col-3 col-sm-3 mx-sm-auto col-md-3">
+        <div className="col-3">
           <img
             src={Iman}
             className="img-fluid"
@@ -140,7 +140,7 @@ const About = () => {
           />
           <h5>Dr. Iman Gurung</h5>
         </div>
-        <div className="col-3 col-sm-3 mx-sm-auto col-md-3">
+        <div className="col-3">
           <img
             src={Pranab}
             className="img-fluid"
@@ -148,7 +148,7 @@ const About = () => {
           />
           <h5>Dr. Pranab Das</h5>
         </div>
-        <div className="col-3 col-sm-3 mx-sm-auto col-md-3">
+        <div className="col-3">
           <img
             src={Thomas}
             className="img-fluid"

@@ -13,9 +13,11 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 
 export default function App() {
   return (
-    <div>
-      {/* <h1>{process.env.NODE_ENV}</h1> */}
-       <BrowserRouter>
+    <>
+    <h1>Hello</h1>
+    </>
+    
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
@@ -28,8 +30,6 @@ export default function App() {
         </Route>
       </Routes>
     </BrowserRouter>
-    </div>
-   
   );
 }
 

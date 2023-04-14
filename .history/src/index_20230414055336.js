@@ -14,7 +14,6 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 export default function App() {
   return (
     <div>
-      {/* <h1>{process.env.NODE_ENV}</h1> */}
        <BrowserRouter>
       <Routes>
         <Route path="/" element={<Layout />}>
