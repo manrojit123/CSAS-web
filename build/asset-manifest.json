@@ -1,10 +1,9 @@
 {
   "files": {
     "main.css": "/static/css/main.72ae8065.css",
-    "main.js": "/static/js/main.c9d8e1f3.js",
+    "main.js": "/static/js/main.824df84b.js",
     "static/media/15.png": "/static/media/15.ae76d723a68b68c9deaf.png",
     "static/media/aboutImg.png": "/static/media/aboutImg.204c704fd5536a0ee59e.png",
-    "static/media/video.gif": "/static/media/video.3d24b1d46696fd493a57.gif",
     "static/media/homeImage.png": "/static/media/homeImage.226ab63a4f763b022bf7.png",
     "static/media/14.png": "/static/media/14.108c61086f6e71d7fe36.png",
     "static/media/10.png": "/static/media/10.e186d93417bca15c4374.png",
@@ -19,10 +18,10 @@
     "static/media/8.png": "/static/media/8.e9e36085ba38a80912cf.png",
     "static/media/11.png": "/static/media/11.2d624d18a25211b45d8e.png",
     "static/media/start.png": "/static/media/start.40bdf1495a4686b61f95.png",
+    "static/media/video.gif": "/static/media/video.e34e0f6f4df17a6f544c.gif",
     "static/media/5.png": "/static/media/5.1b292792063189151afe.png",
     "static/media/contact.png": "/static/media/contact.eaf2211fc1981408458a.png",
     "static/media/4.png": "/static/media/4.8d7fce0bcd8547f16bd7.png",
-    "static/media/loog.png": "/static/media/loog.c5aa0ec9f255be646511.png",
     "static/media/research_iman.png": "/static/media/research_iman.9fa48842b68cd47fdb90.png",
     "static/media/work_research.png": "/static/media/work_research.357e4b35df80fb73914f.png",
     "static/media/research_richard.png": "/static/media/research_richard.d315abd9cafd7495c271.png",
@@ -34,6 +33,7 @@
     "static/media/board_piet.png": "/static/media/board_piet.b527fd89694a6ecb310e.png",
     "static/media/research_bill_dune.png": "/static/media/research_bill_dune.a447e10cefe19778a74f.png",
     "static/media/3.png": "/static/media/3.1c17208697fee24a311a.png",
+    "static/media/loog.png": "/static/media/loog.49c7470c0fa9fa27ad1e.png",
     "static/media/research_thomas.png": "/static/media/research_thomas.565785b1175c5c7d1ead.png",
     "static/media/work_public.png": "/static/media/work_public.196bf138b7f4842210e0.png",
     "static/media/research_elizabeth.png": "/static/media/research_elizabeth.43918208245cc822a6c8.png",
@@ -49,10 +49,10 @@
     "static/media/location.svg": "/static/media/location.3af7f645c5318efaa9ff8161aa50b3d0.svg",
     "static/media/email.svg": "/static/media/email.c8895b2f7df4b0e31f7397934b46646b.svg",
     "main.72ae8065.css.map": "/static/css/main.72ae8065.css.map",
-    "main.c9d8e1f3.js.map": "/static/js/main.c9d8e1f3.js.map"
+    "main.824df84b.js.map": "/static/js/main.824df84b.js.map"
   },
   "entrypoints": [
     "static/css/main.72ae8065.css",
-    "static/js/main.c9d8e1f3.js"
+    "static/js/main.824df84b.js"
   ]
 }
