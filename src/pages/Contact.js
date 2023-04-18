@@ -10,15 +10,15 @@ const Contact = () => {
       <section className="content contactContent">
     <div className="container">
       <div className="row">
-        <div className="col-10 offset-2">
+        <div className="col-12 col-md-10 offset-md-2">
           <h1 className="title">Contact Us</h1>
         </div>
-        <div className="col-4 offset-2">
+        <div className="col-12 col-md-4 offset-md-2 d-md-visible">
           <img src={ContactImg} className="img-fluid" alt="" />
         </div>
-        <div className="col-6">
-          <img className="logo" src={Logo} style={{height:'70px'}} alt="logo"/>
-          <h4 className="title">Center for the Study of Apparent Selves</h4>
+        <div className="col-12 col-md-6">
+          <img className="logo logo-contact" src={Logo} style={{height:'70px'}} alt="logo"/>
+          <h4 className="title title-contact">Center for the Study of Apparent Selves</h4>
           <div className="contact_icon">
             <img src={Location} className="icon" alt=""/><span
               >Nagpokhari, Kathmandu, Nepal</span

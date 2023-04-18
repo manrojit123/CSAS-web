@@ -64,13 +64,12 @@ const Works = () => {
             </div>
             <div className="col-12 col-xl-10 mx-auto text-center">
               <iframe
-                width="560"
-                height="315"
                 src="https://www.youtube.com/embed/jtta_5rGsHU"
                 title="YouTube video player"
-                frameborder="0"
+                frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                allowfullscreen
+                allowFullScreen
+                className="youtube-video"
               ></iframe>
             </div>
             <div className="col-12 col-xl-10 mx-auto">
@@ -282,11 +281,11 @@ const Works = () => {
               <>
                 <div className="popupbox d-flex align-items-center justify-content-center">
                   
-                  <span class="cross" onClick={() => toggleBox("")}><img src={Cross} alt=""/></span>
+                  <span className="cross" onClick={() => toggleBox("")}><img src={Cross} alt=""/></span>
                   
-                  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
-                  <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                  <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
+                  <div className="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
                     <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
@@ -305,30 +304,30 @@ const Works = () => {
                     
 
                   </div>
-                  <div class="carousel-inner">
-                    <div class="carousel-item active"><img src={slide1} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide2} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide3} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide4} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide5} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide6} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide7} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide8} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide9} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide10} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide11} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide12} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide13} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide14} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide15} class="d-block w-100" alt="..."/></div>
-                    <div class="carousel-item "><img src={slide16} class="d-block w-100" alt="..."/></div>
+                  <div className="carousel-inner">
+                    <div className="carousel-item active"><img src={slide1} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide2} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide3} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide4} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide5} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide6} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide7} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide8} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide9} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide10} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide11} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide12} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide13} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide14} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide15} className="d-block w-100" alt="..."/></div>
+                    <div className="carousel-item "><img src={slide16} className="d-block w-100" alt="..."/></div>
 
                     
                   </div>
-                  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
                    <img src={Prev} alt="Previous Button"/>
                   </button>
-                  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
                     <img src={Next} alt="Next Button"/>
                   </button>
                 </div></div>

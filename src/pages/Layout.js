@@ -8,33 +8,60 @@ import '../css/main.css';
 
 const Layout = () => {
   const { pathname } = useLocation();
+  const handleCollapse = () =>{
+    console.log("handleCollapse");
+    var nav = document.getElementById("navmenu");
+    var btn = document.getElementById("navbar-toggler");
+    nav.classList.remove("show");
+    btn.classList.add("collapsed");
+  };
+
+  
   return (
+    
     <>
       <div className="logo">
         <img alt="Vue logo" src={Logo} />
       </div>
-      <nav>
-        <ul>
-          <li className={pathname === '/' ? 'active' : ''}>
-            <Link to="/" >Home</Link>
-          </li>
-          <li  className={pathname === '/about-us' ? 'active' : ''}>
-            <Link to="/about-us" >About us</Link>
-          </li>
-          <li className={pathname === '/our-works' ? 'active' : ''}>
-            <Link to="/our-works" >Our WOrks</Link>
-          </li>
-          <li className={pathname === '/research-team' ? 'active' : ''}>
-            <Link to="/research-team" >Research Team</Link>
-          </li>
-          <li className={pathname === '/blogs' ? 'active' : ''}>
-            <Link to="/blogs" >Blog</Link>
-          </li>
-          <li className={pathname === '/contact' ? 'active' : ''}>
-            <Link to="/contact" >Contact us</Link>
-          </li>
-        </ul>
-      </nav>
+    
+      <nav className="navbar navbar-expand-lg">
+        <div className="container nav-container">
+           
+        
+            <button
+                className="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navmenu"
+                >
+                  MENU
+                {/* <span className="navbar-toggler-icon"></span> */}
+            </button>
+
+            <div className="collapse navbar-collapse" id="navmenu">
+                <ul className="navbar-nav mx-auto">
+                    <li className={pathname === '/' ? 'nav-item active' : 'nav-item'}>
+                      <Link to="/" className="nav-link" onClick={handleCollapse}>Home</Link>
+                    </li>
+                    <li className={pathname === '/about-us' ? 'nav-item active' : 'nav-item'}>
+                      <Link to="/about-us" className="nav-link" onClick={handleCollapse}>About us</Link>
+                    </li>
+                    <li className={pathname === '/our-works' ? 'nav-item active' : 'nav-item'}>
+                      <Link to="/our-works" className="nav-link">Our works</Link>
+                    </li>
+                    <li className={pathname === '/research-team' ? 'nav-item active' : 'nav-item'}>
+                      <Link to="/research-team" className="nav-link">Research Team</Link>
+                    </li>
+                    <li className={pathname === '/blogs' ? 'nav-item active' : 'nav-item'}>
+                      <Link to="/blogs" className="nav-link">Blogs</Link>
+                    </li>
+                    <li className={pathname === '/contact' ? 'nav-item active' : 'nav-item'}>
+                      <Link to="/contact" className="nav-link">Contact</Link>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav> 
 
       <Outlet />
       <nav className="footer p-4 mt-4">
