@@ -1,11 +1,12 @@
 {
   "files": {
     "main.css": "/static/css/main.72ae8065.css",
-    "main.js": "/static/js/main.6d9584bb.js",
+    "main.js": "/static/js/main.6f6e93cb.js",
     "static/media/15.png": "/static/media/15.ae76d723a68b68c9deaf.png",
     "static/media/aboutImg.png": "/static/media/aboutImg.204c704fd5536a0ee59e.png",
     "static/media/homeImage.png": "/static/media/homeImage.226ab63a4f763b022bf7.png",
     "static/media/14.png": "/static/media/14.108c61086f6e71d7fe36.png",
+    "static/media/loog.png": "/static/media/loog.18ce264af5c40783898b.png",
     "static/media/10.png": "/static/media/10.e186d93417bca15c4374.png",
     "static/media/2.png": "/static/media/2.8ae10710369b767203ec.png",
     "static/media/13.png": "/static/media/13.70dd7eba63ad2c74e23c.png",
@@ -33,7 +34,6 @@
     "static/media/board_piet.png": "/static/media/board_piet.b527fd89694a6ecb310e.png",
     "static/media/research_bill_dune.png": "/static/media/research_bill_dune.a447e10cefe19778a74f.png",
     "static/media/3.png": "/static/media/3.1c17208697fee24a311a.png",
-    "static/media/loog.png": "/static/media/loog.49c7470c0fa9fa27ad1e.png",
     "static/media/research_thomas.png": "/static/media/research_thomas.565785b1175c5c7d1ead.png",
     "static/media/work_public.png": "/static/media/work_public.196bf138b7f4842210e0.png",
     "static/media/research_elizabeth.png": "/static/media/research_elizabeth.43918208245cc822a6c8.png",
@@ -49,10 +49,10 @@
     "static/media/location.svg": "/static/media/location.3af7f645c5318efaa9ff8161aa50b3d0.svg",
     "static/media/email.svg": "/static/media/email.c8895b2f7df4b0e31f7397934b46646b.svg",
     "main.72ae8065.css.map": "/static/css/main.72ae8065.css.map",
-    "main.6d9584bb.js.map": "/static/js/main.6d9584bb.js.map"
+    "main.6f6e93cb.js.map": "/static/js/main.6f6e93cb.js.map"
   },
   "entrypoints": [
     "static/css/main.72ae8065.css",
-    "static/js/main.6d9584bb.js"
+    "static/js/main.6f6e93cb.js"
   ]
 }
