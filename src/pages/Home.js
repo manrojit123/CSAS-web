@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import HomeImage from "../assets/homeImage.png";
+import HomeImage from "../assets/homeImage.jpg";
 import StartImage from "../assets/start.png";
 import SeeMore from "../assets/seemorebtn.png";
 import GifAnimation from "../assets/video.gif";

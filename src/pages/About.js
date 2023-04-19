@@ -1,4 +1,4 @@
-import AboutImage from '../assets/aboutImg.png';
+import AboutImage from '../assets/aboutImg.jpg';
 import BillDune from '../assets/research_bill_dune.png';
 import Elizabeth from '../assets/research_elizabeth.png';
 import Iman from '../assets/research_iman.png';
