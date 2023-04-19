@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import HomeImage from "../assets/homeImage.jpg";
+
 import StartImage from "../assets/start.png";
 import SeeMore from "../assets/seemorebtn.png";
 import GifAnimation from "../assets/video.gif";
@@ -42,6 +43,7 @@ class Home extends Component {
               />
             </div>
           </div>
+
 
           <div className="video-overlay" id="gifimage">
             <img src={GifAnimation} alt="Your GIF" />
