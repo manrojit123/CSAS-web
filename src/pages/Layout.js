@@ -41,10 +41,10 @@ const Layout = () => {
             <div className="collapse navbar-collapse" id="navmenu">
                 <ul className="navbar-nav mx-auto">
                     <li className={pathname === '/' ? 'nav-item active' : 'nav-item'}>
-                      <Link to="/" className="nav-link" onClick={handleCollapse}>Home</Link>
+                      <Link to="/" className="nav-link">Home</Link>
                     </li>
                     <li className={pathname === '/about-us' ? 'nav-item active' : 'nav-item'}>
-                      <Link to="/about-us" className="nav-link" onClick={handleCollapse}>About us</Link>
+                      <Link to="/about-us" className="nav-link">About us</Link>
                     </li>
                     <li className={pathname === '/our-works' ? 'nav-item active' : 'nav-item'}>
                       <Link to="/our-works" className="nav-link">Our works</Link>
