@@ -8,6 +8,7 @@ import Blogs from "./pages/Blogs";
 import Research from "./pages/Research";
 import Contact from "./pages/Contact";
 import NoPage from "./pages/NoPage";
+import BlogSinglePage from "./pages/BlogSinglePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 
@@ -20,10 +21,11 @@ export default function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about-us" element={<About />} />
-          <Route path="blogs" element={<Blogs />} />
+          <Route exact path="blogs" element={<Blogs />} />
           <Route path="contact" element={<Contact />} />
           <Route path="research-team" element={<Research />} />
           <Route path="our-works" element={<Works />} />
+          <Route path='/blog/:postId' element={<BlogSinglePage/>} />
           <Route path="*" element={<NoPage />} />
         </Route>
       </Routes>

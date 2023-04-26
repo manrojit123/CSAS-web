@@ -20,15 +20,14 @@ import slide9 from "../assets/slider/9.png";
 
 import slide10 from "../assets/slider/10.png";
 import slide11 from "../assets/slider/11.png";
-import slide12 from "../assets/slider/12.png";
-import slide13 from "../assets/slider/13.png";
+// import slide12 from "../assets/slider/12.png";
+// import slide13 from "../assets/slider/13.png";
 import slide14 from "../assets/slider/14.png";
 import slide15 from "../assets/slider/15.png";
 import slide16 from "../assets/slider/16.png";
 
 import Prev from "../assets/prev.svg";
 import Next from "../assets/next.svg";
-
 
 const Works = () => {
   const [status, setStatus] = useState("");
@@ -146,7 +145,8 @@ const Works = () => {
                           The 2021 Conference on Artificial Life. ALIFE 2021:
                           The 2021 Conference on Artificial Life.
                           <a
-                            target="_blank" rel="noreferrer"
+                            target="_blank"
+                            rel="noreferrer"
                             href="https://doi.org/10.1162/isal_a_00465"
                           >
                             https://doi.org/10.1162/isal_a_00465
@@ -171,7 +171,8 @@ const Works = () => {
                               2021 Conference on Artificia Life. ALIFE 2021: The
                               2021 Conference on Artificial Life. doi:
                               <a
-                                target="_blank" rel="noreferrer"
+                                target="_blank"
+                                rel="noreferrer"
                                 href="https://doi.org/10.1162/isal_a_00402"
                               >
                                 https://doi.org/10.1162/isal_a_00402
@@ -185,7 +186,8 @@ const Works = () => {
                               on Artificial Life. ALIFE 2021: The 2021
                               Conference on Artificial Life. doi:
                               <a
-                                target="_blank" rel="noreferrer"
+                                target="_blank"
+                                rel="noreferrer"
                                 href="https://doi.org/10.1162/isal_a_00455"
                               >
                                 https://doi.org/10.1162/isal_a_00455
@@ -198,7 +200,8 @@ const Works = () => {
                               2021 Conference on Artificial Life. ALIFE 2021:
                               The 2021 Conference on Artificial Life. doi:
                               <a
-                                target="_blank" rel="noreferrer"
+                                target="_blank"
+                                rel="noreferrer"
                                 href="https://doi.org/10.1162/isal_a_00465"
                               >
                                 https://doi.org/10.1162/isal_a_00465
@@ -213,7 +216,8 @@ const Works = () => {
                           Buddhism, and AI: Care as the Driver of Intelligence”.
                           Entropy 24, no. 5: 710.
                           <a
-                            target="_blank" rel="noreferrer"
+                            target="_blank"
+                            rel="noreferrer"
                             href="https://doi.org/10.3390/e24050710"
                           >
                             https://doi.org/10.3390/e24050710
@@ -227,7 +231,8 @@ const Works = () => {
                           Conference on Artificial Life. ALIFE 2022: The 2022
                           Conference on Artificial Life.
                           <a
-                            target="_blank" rel="noreferrer"
+                            target="_blank"
+                            rel="noreferrer"
                             href="https://doi.org/10.1162/isal_a_00531"
                           >
                             https://doi.org/10.1162/isal_a_00531
@@ -248,9 +253,14 @@ const Works = () => {
               </div>
             )}
 
-            {status === "engagement" && <div>
-              From time to time, we organise Workshops and seminars where we bring together Scientists and Buddhist scholars/practiciner can share their ideas. Recently, we have organised “CARE as Driver for Intelligent” workshop (Pictures of Workshop).
-              </div>}
+            {status === "engagement" && (
+              <div>
+                From time to time, we organise Workshops and seminars where we
+                bring together Scientists and Buddhist scholars/practiciner can
+                share their ideas. Recently, we have organised “CARE as Driver
+                for Intelligent” workshop (Pictures of Workshop).
+              </div>
+            )}
 
             {status === "education" && (
               <div>
@@ -280,59 +290,218 @@ const Works = () => {
             {status === "workshop" && (
               <>
                 <div className="popupbox d-flex align-items-center justify-content-center">
-                  
-                  <span className="cross" onClick={() => toggleBox("")}><img src={Cross} alt=""/></span>
-                  
-                  <div id="carouselExampleDark" className="carousel carousel-dark slide" data-bs-ride="carousel">
-                  <div className="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 7"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" aria-label="Slide 8"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" aria-label="Slide 9"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" aria-label="Slide 10"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="10" aria-label="Slide 11"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="11" aria-label="Slide 12"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="12" aria-label="Slide 13"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="13" aria-label="Slide 14"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="14" aria-label="Slide 15"></button>
-                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="15" aria-label="Slide 16"></button>
-                    
+                  <span className="cross" onClick={() => toggleBox("")}>
+                    <img src={Cross} alt="" />
+                  </span>
 
+                  <div
+                    id="carouselExampleDark"
+                    className="carousel carousel-dark slide"
+                    data-bs-ride="carousel"
+                  >
+                    <div className="carousel-indicators d-none">
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="0"
+                        className="active"
+                        aria-current="true"
+                        aria-label="Slide 1"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="1"
+                        aria-label="Slide 2"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="2"
+                        aria-label="Slide 3"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="3"
+                        aria-label="Slide 4"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="4"
+                        aria-label="Slide 5"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="5"
+                        aria-label="Slide 6"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="6"
+                        aria-label="Slide 7"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="7"
+                        aria-label="Slide 8"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="8"
+                        aria-label="Slide 9"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="9"
+                        aria-label="Slide 10"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="10"
+                        aria-label="Slide 11"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="11"
+                        aria-label="Slide 12"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="12"
+                        aria-label="Slide 13"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="13"
+                        aria-label="Slide 14"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="14"
+                        aria-label="Slide 15"
+                      ></button>
+                      <button
+                        type="button"
+                        data-bs-target="#carouselExampleDark"
+                        data-bs-slide-to="15"
+                        aria-label="Slide 16"
+                      ></button>
+                    </div>
+                    <div className="carousel-inner">
+                      <div className="carousel-item active">
+                        <img src={slide1} className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item ">
+                        <img src={slide2} className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item ">
+                        <img src={slide3} className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item ">
+                        <img src={slide4} className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item ">
+                        <img src={slide5} className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item ">
+                        <img src={slide6} className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item ">
+                        <img src={slide7} className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item ">
+                        <img src={slide8} className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item ">
+                        <img src={slide9} className="d-block w-100" alt="..." />
+                      </div>
+                      <div className="carousel-item ">
+                        <img
+                          src={slide10}
+                          className="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="carousel-item ">
+                        <img
+                          src={slide11}
+                          className="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="carousel-item ">
+                        {" "}
+                        <iframe
+                          src="https://www.youtube.com/embed/jtta_5rGsHU"
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                          className="youtube-video"
+                        ></iframe>
+                      </div>
+                      <div className="carousel-item ">
+                        <iframe
+                          src="https://www.youtube.com/embed/jtta_5rGsHU"
+                          title="YouTube video player"
+                          frameBorder="0"
+                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                          allowFullScreen
+                          className="youtube-video"
+                        ></iframe>
+                      </div>
+                      <div className="carousel-item ">
+                        <img
+                          src={slide14}
+                          className="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="carousel-item ">
+                        <img
+                          src={slide15}
+                          className="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                      <div className="carousel-item ">
+                        <img
+                          src={slide16}
+                          className="d-block w-100"
+                          alt="..."
+                        />
+                      </div>
+                    </div>
+                    <button
+                      className="carousel-control-prev"
+                      type="button"
+                      data-bs-target="#carouselExampleDark"
+                      data-bs-slide="prev"
+                    >
+                      <img src={Prev} alt="Previous Button" />
+                    </button>
+                    <button
+                      className="carousel-control-next"
+                      type="button"
+                      data-bs-target="#carouselExampleDark"
+                      data-bs-slide="next"
+                    >
+                      <img src={Next} alt="Next Button" />
+                    </button>
                   </div>
-                  <div className="carousel-inner">
-                    <div className="carousel-item active"><img src={slide1} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide2} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide3} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide4} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide5} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide6} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide7} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide8} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide9} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide10} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide11} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide12} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide13} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide14} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide15} className="d-block w-100" alt="..."/></div>
-                    <div className="carousel-item "><img src={slide16} className="d-block w-100" alt="..."/></div>
-
-                    
-                  </div>
-                  <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                   <img src={Prev} alt="Previous Button"/>
-                  </button>
-                  <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                    <img src={Next} alt="Next Button"/>
-                  </button>
-                </div></div>
-                
-                
+                </div>
               </>
             )}
           </div>

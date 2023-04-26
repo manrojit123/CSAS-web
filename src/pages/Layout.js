@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from 'react';
+
 import { Outlet, Link, useLocation } from "react-router-dom";
 import Logo from '../assets/loog.png';
 import Collab1 from "../assets/collab1.png";
@@ -8,13 +9,21 @@ import '../css/main.css';
 
 const Layout = () => {
   const { pathname } = useLocation();
-  const handleCollapse = () =>{
-    console.log("handleCollapse");
-    var nav = document.getElementById("navmenu");
-    var btn = document.getElementById("navbar-toggler");
-    nav.classList.remove("show");
-    btn.classList.add("collapsed");
+  const [showNav, setShowNav] = useState(false);
+
+  const handleNavToggle = () => {
+    setShowNav(!showNav);
   };
+  const handleLinkClick = () => {
+    setShowNav(false);
+  };
+  // const handleCollapse = () =>{
+  //   console.log("handleCollapse");
+  //   var nav = document.getElementById("navmenu");
+  //   var btn = document.getElementById("navbar-toggler");
+  //   nav.classList.remove("show");
+  //   btn.classList.add("collapsed");
+  // };
 
   
   return (
@@ -28,40 +37,44 @@ const Layout = () => {
         <div className="container nav-container">
            
         
-            <button
-                className="navbar-toggler"
-                type="button"
-                data-bs-toggle="collapse"
-                data-bs-target="#navmenu"
-                >
+        <button
+            className="navbar-toggler"
+            type="button"
+            onClick={handleNavToggle}
+            aria-expanded={showNav ? 'true' : 'false'}
+            aria-label="Toggle navigation"
+          >
                   MENU
                 {/* <span className="navbar-toggler-icon"></span> */}
             </button>
 
-            <div className="collapse navbar-collapse" id="navmenu">
+            <div className={`collapse navbar-collapse ${showNav ? 'show' : ''}`} id="navmenu">
                 <ul className="navbar-nav mx-auto">
                     <li className={pathname === '/' ? 'nav-item active' : 'nav-item'}>
-                      <Link to="/" className="nav-link">Home</Link>
+                      <Link  onClick={handleLinkClick} to="/" className="nav-link" >Home</Link>
                     </li>
                     <li className={pathname === '/about-us' ? 'nav-item active' : 'nav-item'}>
-                      <Link to="/about-us" className="nav-link">About us</Link>
+                      <Link  onClick={handleLinkClick} to="/about-us" className="nav-link">About us</Link>
                     </li>
                     <li className={pathname === '/our-works' ? 'nav-item active' : 'nav-item'}>
-                      <Link to="/our-works" className="nav-link">Our works</Link>
+                      <Link  onClick={handleLinkClick} to="/our-works" className="nav-link">Our works</Link>
                     </li>
                     <li className={pathname === '/research-team' ? 'nav-item active' : 'nav-item'}>
-                      <Link to="/research-team" className="nav-link">Research Team</Link>
+                      <Link  onClick={handleLinkClick} to="/research-team" className="nav-link">Research Team</Link>
                     </li>
                     <li className={pathname === '/blogs' ? 'nav-item active' : 'nav-item'}>
-                      <Link to="/blogs" className="nav-link">Blogs</Link>
+                      <Link  onClick={handleLinkClick} to="/blogs" className="nav-link">Blogs</Link>
                     </li>
                     <li className={pathname === '/contact' ? 'nav-item active' : 'nav-item'}>
-                      <Link to="/contact" className="nav-link">Contact</Link>
+                      <Link  onClick={handleLinkClick} to="/contact" className="nav-link">Contact</Link>
                     </li>
                 </ul>
             </div>
         </div>
-    </nav> 
+      </nav> 
+
+
+    
 
       <Outlet />
       <nav className="footer p-4 mt-4">

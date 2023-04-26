@@ -26,18 +26,16 @@ const Contact = () => {
           </div>
           <div className="contact_icon">
             <img src={Phone} className="icon" alt="" /><span
-              >+977-9803525252</span
+              ><a href="tel:+977-9803525252">+977-9803525252</a></span
             >
           </div>
           <div className="contact_icon">
             <img src={Email} className="icon" alt="" /><span
-              >info@apparentselves.org</span
-            >
+              ><a href="mailto:info@apparentselves.org">info@apparentselves.org</a></span>
           </div>
           <div className="contact_icon">
             <img src={Websi} className="icon" alt="" /><span
-              >www.apparentselves.org</span
-            >
+              ><a href="www.apparentselves.org">www.apparentselves.org</a></span>
           </div>
         </div>
       </div>

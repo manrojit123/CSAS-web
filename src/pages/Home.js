@@ -6,6 +6,14 @@ import SeeMore from "../assets/seemorebtn.png";
 import GifAnimation from "../assets/video.gif";
 
 class Home extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      gifSrc: null
+    };
+    
+  }
+
   state = {
     isActive: false,
   };
@@ -14,17 +22,19 @@ class Home extends Component {
     document.body.style.overflow = "hidden";
   }
 
-
   toggleActive() {
-    this.setState({isActive: !this.isActive })
+    this.setState({ isActive: !this.isActive });
     document.body.style.overflow = "scroll";
+    this.setState({
+      gifSrc: GifAnimation
+    });
     setTimeout(() => {
       document.getElementById("gifimage").classList.add("hidegif");
-    }, 3200);
+    }, 4200);
   }
 
   render() {
-    
+    const { gifSrc } = this.state;
     return (
       <>
         <section className="content homeContent">
@@ -44,9 +54,8 @@ class Home extends Component {
             </div>
           </div>
 
-
           <div className="video-overlay" id="gifimage">
-            <img src={GifAnimation} alt="Your GIF" />
+            {gifSrc && <img src={gifSrc} alt="GIF" />}
           </div>
           <div className="container">
             <div className="row">
