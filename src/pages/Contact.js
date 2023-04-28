@@ -1,5 +1,5 @@
-import ContactImg from "../assets/contact.png";
-import Logo from "../assets/loog.png";
+import ContactImg from "../assets/contact.webp";
+import Logo from "../assets/loog.webp";
 import Location from "../assets/location.svg";
 import Phone from "../assets/phone.svg";
 import Email from "../assets/email.svg";

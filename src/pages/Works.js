@@ -1,30 +1,30 @@
 import React, { useState } from "react";
 // import Carousel from "react-bootstrap/Carousel";
-import Research from "../assets/work_research.png";
-import Workshop from "../assets/work_workshop.png";
-import Education from "../assets/work_education.png";
-import Engagement from "../assets/work_public.png";
+import Research from "../assets/work_research.webp";
+import Workshop from "../assets/work_workshop.webp";
+import Education from "../assets/work_education.webp";
+import Engagement from "../assets/work_public.webp";
 import Cross from "../assets/cross.svg";
 
-import slide1 from "../assets/slider/1.png";
-import slide2 from "../assets/slider/2.png";
-import slide3 from "../assets/slider/3.png";
+import slide1 from "../assets/slider/1.webp";
+import slide2 from "../assets/slider/2.webp";
+import slide3 from "../assets/slider/3.webp";
 
-import slide4 from "../assets/slider/4.png";
-import slide5 from "../assets/slider/5.png";
-import slide6 from "../assets/slider/6.png";
+import slide4 from "../assets/slider/4.webp";
+import slide5 from "../assets/slider/5.webp";
+import slide6 from "../assets/slider/6.webp";
 
-import slide7 from "../assets/slider/7.png";
-import slide8 from "../assets/slider/8.png";
-import slide9 from "../assets/slider/9.png";
+import slide7 from "../assets/slider/7.webp";
+import slide8 from "../assets/slider/8.webp";
+import slide9 from "../assets/slider/9.webp";
 
-import slide10 from "../assets/slider/10.png";
-import slide11 from "../assets/slider/11.png";
-// import slide12 from "../assets/slider/12.png";
-// import slide13 from "../assets/slider/13.png";
-import slide14 from "../assets/slider/14.png";
-import slide15 from "../assets/slider/15.png";
-import slide16 from "../assets/slider/16.png";
+import slide10 from "../assets/slider/10.webp";
+import slide11 from "../assets/slider/11.webp";
+// import slide12 from "../assets/slider/12.webp";
+// import slide13 from "../assets/slider/13.webp";
+import slide14 from "../assets/slider/14.webp";
+import slide15 from "../assets/slider/15.webp";
+import slide16 from "../assets/slider/16.webp";
 
 import Prev from "../assets/prev.svg";
 import Next from "../assets/next.svg";

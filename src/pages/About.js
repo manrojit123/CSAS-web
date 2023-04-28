@@ -1,15 +1,15 @@
-import AboutImage from '../assets/aboutImg.jpg';
+import AboutImage from '../assets/aboutImg.webp';
 
-import BillDune from '../assets/research_bill_dune.png';
-import Elizabeth from '../assets/research_elizabeth.png';
-import Iman from '../assets/research_iman.png';
-import Michael from '../assets/research_michael.png';
-import Olaf from "../assets/research_olaf.png";
-import Pranab from "../assets/research_pranab.png";
-import Richard from "../assets/research_richard.png";
-import Thomas from "../assets/research_thomas.png";
-import Chokyl from "../assets/board_chokyl.png";
-import Piet from "../assets/board_piet.png";
+import BillDune from '../assets/research_bill_dune.webp';
+import Elizabeth from '../assets/research_elizabeth.webp';
+import Iman from '../assets/research_iman.webp';
+import Michael from '../assets/research_michael.webp';
+import Olaf from "../assets/research_olaf.webp";
+import Pranab from "../assets/research_pranab.webp";
+import Richard from "../assets/research_richard.webp";
+import Thomas from "../assets/research_thomas.webp";
+import Chokyl from "../assets/board_chokyl.webp";
+import Piet from "../assets/board_piet.webp";
 const About = () => {
     return <>
     <section className="content aboutContent">

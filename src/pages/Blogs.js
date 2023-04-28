@@ -1,90 +1,150 @@
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
 import axios from "axios";
-import Image from "../assets/start.png";
 
 function Blogs() {
-  const [posts, setPosts] = useState([]);
+  const [blogData, setBlogData] = useState(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const [totalPages, setTotalPages] = useState(1);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     axios
-      .get(`https://jsonplaceholder.typicode.com/posts?_page=${currentPage}`)
+      .get(`http://apparentselves.org/api/blogs?page=${currentPage}`)
       .then((response) => {
-        setPosts(response.data);
-        setTotalPages(Math.ceil(response.headers["x-total-count"] / 10)); // assuming 10 posts per page
+        if (response.data.code === 200) {
+          setBlogData(response.data);
+          setLoading(false);
+        } else {
+          setLoading(false);
+        }
       })
       .catch((error) => console.log(error));
   }, [currentPage]);
-  const nextPage = () => {
-    if (currentPage < totalPages) {
-      setCurrentPage(currentPage + 1);
-    }
+  
+
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
   };
 
-  const prevPage = () => {
-    if (currentPage > 1) {
-      setCurrentPage(currentPage - 1);
-    }
+  const handlePreviousPage = () => {
+    setCurrentPage((prevPage) => prevPage - 1);
   };
+
+  const handleNextPage = () => {
+    setCurrentPage((prevPage) => prevPage + 1);
+  };
+  function Pagination({ currentPage, lastPage, onPageChange, onPreviousPage, onNextPage }) {
+    const pageNumbers = [];
+  
+    for (let i = 1; i <= lastPage; i++) {
+      pageNumbers.push(i);
+    }
+  
+    return (
+     
+      <div className={ lastPage === 1 ? "d-none" : "pagination-container"}>
+        <button
+          className="pagination-button"
+          onClick={onPreviousPage}
+          disabled={currentPage === 1}
+        >
+          Previous
+        </button>
+        {pageNumbers.map((pageNumber) => (
+          <button
+            key={pageNumber}
+            className={`pagination-button ${currentPage === pageNumber ? 'active' : ''}`}
+            onClick={() => onPageChange(pageNumber)}
+            disabled={currentPage === pageNumber}
+          >
+            {pageNumber}
+          </button>
+        ))}
+        <button
+          className="pagination-button"
+          onClick={onNextPage}
+          disabled={currentPage === lastPage}
+        >
+          Next
+        </button>
+      </div>
+     
+    );
+  }
   return (
     <div>
-      <section className="content blogContent">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 col-xl-10 mx-auto  mb-3">
-              <h1 className="title">Blog</h1>
-              <p>
-                CSAS seeks to cultivate understanding of and means for. human
-                flourishing that are applicable to a broad range of societal and
-                environmental contexts health, education. peace building, caring
-                for the biosyjtem, etc. As a research network with global
-                participation and a physical presence in Kathmandu, Nepal,
-              </p>
-            </div>
+    <section className="content blogContent">
+      <div className="container">
+        <div className="row">
+          <div className="col-12 col-xl-10 mx-auto  mb-3">
+            <h1 className="title">Blog</h1>
+            <p>
+              CSAS seeks to cultivate understanding of and means for. human
+              flourishing that are applicable to a broad range of societal and
+              environmental contexts health, education. peace building, caring
+              for the biosyjtem, etc. As a research network with global
+              participation and a physical presence in Kathmandu, Nepal,
+            </p>
           </div>
-          {/* <div className="row">
-            {posts.map((item) => (
-              <div className="col-12 col-md-4 col-xl-3" key={item.id}>
-                <div className="tile">
-                  <Link to={`/blog/${item.id}`} className="">
-                    <div className="postPhoto">
-                      <img src={Image} alt={"text"} />
-                    </div>
-                    <div className="postInfo">
-                      <h3>{item.title}</h3>
-
-                      <div className="blogMeta pml-3">
-                        <span>{item.userId}</span>
-                      </div>
-                    </div>
-                  </Link>
+        </div>
+        <div className="row">
+          {loading ? 
+            (
+              <div class="container">
+              <div class="row">
+                <div class="col-12 text-center">
+                  <div class="lds-ellipsis">
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                    <div></div>
+                  </div>
                 </div>
               </div>
-            ))}
-            <div className="pagination">
-              <button
-                className="page-btn left"
-                disabled={currentPage === 1}
-                onClick={prevPage}
-              >
-                <span className="arrow left"></span>
-              </button>
-              <span className="page-info">
-                Page {currentPage} of {totalPages}
-              </span>
-              <button
-                className="page-btn right"
-                disabled={currentPage === totalPages}
-                onClick={nextPage}
-              >
-               <span className="arrow right"></span>
-              </button>
-            </div>
-          </div> */}
+              </div>
+            ) : 
+            (
+              <>
+                {blogData?.length === 0 ? (
+                  <>Post not found...</>
+                ) : (
+                  blogData.data.data.map((blog) => (
+                    <div className="col-12 col-xl-3 col-md-6" key={blog.id}>
+                      <div className="tile">
+                        <div
+                          key={blog.id}
+                          onClick={() => (window.location.href = `/blog/${blog.id}`)}
+                        >
+                          <div className="postPhoto">
+                            <img src={blog.image} alt={"text"} />
+                          </div>
+                          <div className="postInfo">
+                            <h3>{blog.title}</h3>
+
+                            {/* <div className="blogMeta pml-3">
+                              <span>{item.userId}</span>
+                            </div> */}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ))
+                )}
+              </>
+            )
+          }
         </div>
-      </section>
+      </div>
+    </section>  
+      
+    {blogData && (
+      <Pagination
+        currentPage={blogData.data.currentPage}
+        lastPage={blogData.data.lastPage}
+        onPageChange={handlePageChange}
+        onPreviousPage={handlePreviousPage}
+        onNextPage={handleNextPage}
+      />
+    )}
     </div>
   );
 }

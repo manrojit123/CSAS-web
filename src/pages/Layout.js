@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 
 import { Outlet, Link, useLocation } from "react-router-dom";
-import Logo from '../assets/loog.png';
-import Collab1 from "../assets/collab1.png";
-import Collab2 from "../assets/collab2.png";
-import Collab3 from "../assets/collab3.png";
+import Logo from '../assets/loog.webp';
+import Collab1 from "../assets/collab1.webp";
+import Collab2 from "../assets/collab2.webp";
+import Collab3 from "../assets/collab3.webp";
 import '../css/main.css';
 
 const Layout = () => {

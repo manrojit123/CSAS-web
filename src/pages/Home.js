@@ -1,8 +1,8 @@
 import React, { Component } from "react";
-import HomeImage from "../assets/homeImage.jpg";
+import HomeImage from "../assets/homeImage.webp";
 
-import StartImage from "../assets/start.png";
-import SeeMore from "../assets/seemorebtn.png";
+import StartImage from "../assets/start.webp";
+import SeeMore from "../assets/seemorebtn.webp";
 import GifAnimation from "../assets/video.gif";
 
 class Home extends Component {
