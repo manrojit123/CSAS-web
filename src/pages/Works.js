@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState} from "react";
+import YouTube from 'react-youtube';
+
 // import Carousel from "react-bootstrap/Carousel";
 import Research from "../assets/work_research.webp";
 import Workshop from "../assets/work_workshop.webp";
@@ -31,7 +33,51 @@ import Next from "../assets/next.svg";
 
 const Works = () => {
   const [status, setStatus] = useState("");
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [carouselItems] = useState([
+    { type: 'image', src: `${slide1}` },
+    { type: 'image', src: `${slide2}` },
+    { type: 'image', src: `${slide3}` },
+    { type: 'image', src: `${slide4}` },
+    { type: 'image', src: `${slide5}` },
+    { type: 'image', src: `${slide6}` },
+    { type: 'image', src: `${slide7}` },
+    { type: 'image', src: `${slide8}` },
+    { type: 'image', src: `${slide9}` },
+    { type: 'image', src: `${slide10}` },
+    { type: 'image', src: `${slide11}` },
 
+    { type: 'video', videoId: 'jtta_5rGsHU' },
+    { type: 'video', videoId: 'OnTelUJrDhc' },
+
+    { type: 'image', src: `${slide14}` },
+    { type: 'image', src: `${slide15}` },
+    { type: 'image', src: `${slide16}` },
+  ]);
+  const [player, setPlayer] = useState(null);
+  const opts = {
+    height: '390',
+    width: '640',
+    playerVars: {
+      autoplay: 0,
+    },
+  };
+
+  const handlePlay = (event) => {
+    if (player) {
+      player.pauseVideo();
+    }
+    setPlayer(event.target);
+  };
+
+  const handleSlide = (index) => {
+    if (player) {
+      player.pauseVideo();
+    }
+    setActiveIndex(index);
+  };
+  
+  
   const toggleBox = (e) => {
     setStatus(e);
   };
@@ -297,7 +343,10 @@ const Works = () => {
                   <div
                     id="carouselExampleDark"
                     className="carousel carousel-dark slide"
-                    data-bs-ride="carousel"
+                    // data-bs-ride="carousel"
+                    data-bs-interval="false"
+                    data-pause="hover"
+                    
                   >
                     <div className="carousel-indicators d-none">
                       <button
@@ -400,95 +449,23 @@ const Works = () => {
                       ></button>
                     </div>
                     <div className="carousel-inner">
-                      <div className="carousel-item active">
-                        <img src={slide1} className="d-block w-100" alt="..." />
-                      </div>
-                      <div className="carousel-item ">
-                        <img src={slide2} className="d-block w-100" alt="..." />
-                      </div>
-                      <div className="carousel-item ">
-                        <img src={slide3} className="d-block w-100" alt="..." />
-                      </div>
-                      <div className="carousel-item ">
-                        <img src={slide4} className="d-block w-100" alt="..." />
-                      </div>
-                      <div className="carousel-item ">
-                        <img src={slide5} className="d-block w-100" alt="..." />
-                      </div>
-                      <div className="carousel-item ">
-                        <img src={slide6} className="d-block w-100" alt="..." />
-                      </div>
-                      <div className="carousel-item ">
-                        <img src={slide7} className="d-block w-100" alt="..." />
-                      </div>
-                      <div className="carousel-item ">
-                        <img src={slide8} className="d-block w-100" alt="..." />
-                      </div>
-                      <div className="carousel-item ">
-                        <img src={slide9} className="d-block w-100" alt="..." />
-                      </div>
-                      <div className="carousel-item ">
-                        <img
-                          src={slide10}
-                          className="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div className="carousel-item ">
-                        <img
-                          src={slide11}
-                          className="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div className="carousel-item ">
-                        {" "}
-                        <iframe
-                          src="https://www.youtube.com/embed/jtta_5rGsHU"
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                          className="youtube-video"
-                        ></iframe>
-                      </div>
-                      <div className="carousel-item ">
-                        <iframe
-                          src="https://www.youtube.com/embed/jtta_5rGsHU"
-                          title="YouTube video player"
-                          frameBorder="0"
-                          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                          allowFullScreen
-                          className="youtube-video"
-                        ></iframe>
-                      </div>
-                      <div className="carousel-item ">
-                        <img
-                          src={slide14}
-                          className="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div className="carousel-item ">
-                        <img
-                          src={slide15}
-                          className="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
-                      <div className="carousel-item ">
-                        <img
-                          src={slide16}
-                          className="d-block w-100"
-                          alt="..."
-                        />
-                      </div>
+                    {carouselItems.map((item, index) => (
+                        <div className={`carousel-item ${index === activeIndex ? 'active' : ''}`} key={index}>
+                          {item.type === 'video' ? (
+                            <YouTube videoId={item.videoId} opts={opts} onPlay={handlePlay} />
+                          ) : (
+                            <img src={item.src} alt="dummy" className="d-block w-100"/>
+                          )}
+                        </div>
+                      ))
+                    }
                     </div>
                     <button
                       className="carousel-control-prev"
                       type="button"
                       data-bs-target="#carouselExampleDark"
                       data-bs-slide="prev"
+                      onClick={() => handleSlide((activeIndex - 1 + carouselItems.length) % carouselItems.length)}
                     >
                       <img src={Prev} alt="Previous Button" />
                     </button>
@@ -497,6 +474,7 @@ const Works = () => {
                       type="button"
                       data-bs-target="#carouselExampleDark"
                       data-bs-slide="next"
+                      onClick={() => handleSlide((activeIndex + 1) % carouselItems.length)}
                     >
                       <img src={Next} alt="Next Button" />
                     </button>

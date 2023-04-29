@@ -7,6 +7,7 @@ import Works from "./pages/Works";
 import Blogs from "./pages/Blogs";
 import Research from "./pages/Research";
 import Contact from "./pages/Contact";
+
 import NoPage from "./pages/NoPage";
 import BlogSinglePage from "./pages/BlogSinglePage";
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -25,6 +26,7 @@ export default function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="research-team" element={<Research />} />
           <Route path="our-works" element={<Works />} />
+          
           <Route path='/blog/:postId' element={<BlogSinglePage/>} />
           <Route path="*" element={<NoPage />} />
         </Route>

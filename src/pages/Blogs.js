@@ -108,7 +108,7 @@ function Blogs() {
                   <>Post not found...</>
                 ) : (
                   blogData.data.data.map((blog) => (
-                    <div className="col-12 col-xl-3 col-md-6" key={blog.id}>
+                    <div className="col-12 col-xl-4 col-md-6" key={blog.id}>
                       <div className="tile">
                         <div
                           key={blog.id}
