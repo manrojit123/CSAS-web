@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from 'react-router-dom';
 import axios from "axios";
 
 function Blogs() {
@@ -89,10 +90,10 @@ function Blogs() {
         <div className="row">
           {loading ? 
             (
-              <div class="container">
-              <div class="row">
-                <div class="col-12 text-center">
-                  <div class="lds-ellipsis">
+              <div className="container">
+              <div className="row">
+                <div className="col-12 text-center">
+                  <div className="lds-ellipsis">
                     <div></div>
                     <div></div>
                     <div></div>
@@ -107,24 +108,22 @@ function Blogs() {
                 {blogData?.length === 0 ? (
                   <>Post not found...</>
                 ) : (
-                  blogData.data.data.map((blog) => (
+                  blogData.data.data.reverse().map((blog) => (
                     <div className="col-12 col-xl-4 col-md-6" key={blog.id}>
                       <div className="tile">
-                        <div
-                          key={blog.id}
-                          onClick={() => (window.location.href = `/blog/${blog.id}`)}
-                        >
+                        
+                          <Link to={`/blog/${blog.slug}`} key={blog.id} params={{ id: `${blog.id}` }}>
                           <div className="postPhoto">
                             <img src={blog.image} alt={"text"} />
                           </div>
                           <div className="postInfo">
                             <h3>{blog.title}</h3>
 
-                            {/* <div className="blogMeta pml-3">
-                              <span>{item.userId}</span>
-                            </div> */}
+                            <div className="blogMeta pml-3">
+                              <span>{blog.date}</span>
+                            </div>
                           </div>
-                        </div>
+                        </Link>
                       </div>
                     </div>
                   ))

@@ -38,6 +38,10 @@ a:hover{
 p {
     margin-bottom: 0.7rem !important;
 }
+.btn-primary{
+    background-color: var(--pinkBrand) !important;
+    border-color: var(--pinkHover) !important;
+}
 
 .title {
     font-family: "EB Garamond";
@@ -75,14 +79,14 @@ nav ul {
 }
 
 #navmenu ul li.active a {
-    color: var(--blackBrand);
+    color: var(--blackBrand) !important;
 }
 
 #navmenu ul li a {
     position: relative;
 }
 
-#navmenu ul li a:after {
+#navmenu ul li a:before {
     content: "";
     display: inline-block;
     width: 5px;
@@ -96,7 +100,7 @@ nav ul {
     transition: all 500ms ease-in;
 }
 
-#navmenu ul li.active a:after {
+#navmenu ul li.active a:before{
     content: "";
     display: inline-block;
     width: 5px;
@@ -209,6 +213,9 @@ nav ul {
 .worksTypes img {
     cursor: pointer;
 }
+iframe{
+    border-radius:10px
+}
 
 .cross {
     cursor: pointer;
@@ -263,6 +270,57 @@ nav ul {
     font-size: 0.8rem;
     margin-top: 5px;
     opacity: 0.4;
+}
+.comments-box{
+    position:sticky;
+    top:50px;
+}
+.wrapper .comment .comment_content {
+    display: grid;
+    grid-template-columns: auto 1fr 15px;
+    align-items: flex-start;
+    gap: 16px;
+    flex: 1;
+    margin-top: 15px;
+}
+
+.wrapper .comment .comment_content .avatar {
+    height: 48px;
+    width: 48px;
+}
+
+.wrapper .comment .comment_content .avatar img {
+    max-width: 100%;
+    border-radius: 999px;
+    object-fit: cover;
+}
+
+.wrapper .comment .content-comment {
+    flex: 1;
+    display: block;
+}
+
+.wrapper .comment .content-comment .user {
+    gap: 12px;
+    margin-bottom: 6px;
+    align-items: center;
+    display: flex;
+}
+
+h5.blog-h5 {
+    color: #1c1c1c;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 0;;
+}
+
+.is-mute {
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #969696;
 }
 
 .contactContent {
@@ -599,11 +657,11 @@ nav ul {
     margin: 2em 0;
 }
 
-.responseSpan {
+.responseSpan,.error {
     font-size: 12px;
 }
 
-.responseSpan.error {
+.responseSpan.error,.error {
     color: rgb(236, 55, 55);
 }
 
